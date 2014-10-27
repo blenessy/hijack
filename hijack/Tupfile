@@ -3,6 +3,7 @@ include global.tup
 
 ifndef TARGET
   error Must define at least one variant.
+  error Hint: cp configs/f1611.config tup.config
 endif
 
 : <objs> |> @(CC) %<objs> $(LDFLAGS) -o %o |> @(TARGET).elf | @(TARGET).map {elf}
